@@ -2,8 +2,9 @@
 
 GRUB_DEFAULT="0"
 GRUB_TIMEOUT=5
-GRUB_DISTRIBUTOR='Garuda'
-GRUB_CMDLINE_LINUX_DEFAULT="resume=UUID=a3ec1c35-28fe-46ea-84eb-d7dc7b91d461 loglevel=3"
+GRUB_DISTRIBUTOR='Morningstar'
+#GRUB_CMDLINE_LINUX_DEFAULT="resume=UUID=a3ec1c35-28fe-46ea-84eb-d7dc7b91d461 loglevel=3"
+GRUB_CMDLINE_LINUX_DEFAULT="resume=UUID=a3ec1c35-28fe-46ea-84eb-d7dc7b91d461 amd_iommu=on amd_iommu_dump=1 rd.driver.pre=vfio-pci kvm.ignore_msrs=1 vfio_iommu_type1.allow_unsafe_interrupts=1 pci=nommconf vfio-pci.ids=10de:1b06,10de:10ef pcie_acs_override=downstream,multifunction snd-intel-dspcfg.dsp_driver=0 rd.udev.log_priority=3 vt.global_cursor_default=0 loglevel=3"
 GRUB_CMDLINE_LINUX=""
 
 # Preload both GPT and MBR modules so that they are not missed
